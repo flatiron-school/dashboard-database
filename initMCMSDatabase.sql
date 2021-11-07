@@ -1,3 +1,5 @@
+-- Create create_myuser stored procedure to add users,
+-- only if they don't already exist. 
 CREATE OR REPLACE FUNCTION create_myuser(theUsername text, thePassword text)
 RETURNS void AS
 $BODY$
@@ -22,4 +24,3 @@ $BODY$
 LANGUAGE 'plpgsql';
 
 SELECT create_myuser(:vUsername, :vPassword);
-
