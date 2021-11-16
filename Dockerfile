@@ -8,3 +8,5 @@ WORKDIR /sql
 
 COPY initMCMSDatabase.sql .
 COPY initMCMSDatabase.sh /docker-entrypoint-initdb.d/
+
+EXPOSE 5432
